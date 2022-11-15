@@ -1,22 +1,29 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
+import { MatNativeDateModule } from '@angular/material/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuListComponent } from './menu-list/menu-list.component';
-import { TaskFormComponent } from './task-form/task-form.component';
-import { SearchBarComponent } from './search-bar/search-bar.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuListComponent,
-    TaskFormComponent,
-    SearchBarComponent
+    MenuListComponent, 
+  
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    MatNativeDateModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatButtonModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
