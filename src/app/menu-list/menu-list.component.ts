@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Ticket } from 'src/app/ticket';
+import { Ticket } from 'app/ticket';
 import { TicketSystemService } from '../ticket-system.service';
 
 @Component({

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Ticket } from 'src/app/ticket';
+import { Ticket } from './ticket';
 
 
 
@@ -14,6 +14,6 @@ export class TicketSystemService {
   constructor(private httpclient: HttpClient) { }
 
   getTickets = (): Observable<Ticket[]> => {
-    return this.httpclient.get<Ticket[]>(`${this.backend}/alltickets`);
+    return this.httpclient.get<Ticket[]>(`${this.backend}/Ticket/alltickets`);
   }
 }
