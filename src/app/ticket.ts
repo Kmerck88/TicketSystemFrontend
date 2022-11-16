@@ -1,15 +1,13 @@
 export interface Ticket { 
-  Id: number;
-  Name: string;
-  Category: string;
-  Detail: string;
-  Created: Date;
-  OpenedByName: string;
-  OpenedByEmail: number;
-  CompletedByEmail:string;
-  CompletedByName: string;
-  Completed: boolean; 
+  id: number;
+  name: string;
+  category: string;
+  detail: string;
+  created: Date;
+  openedByName: string;
+  openedByEmail: number;
+  completedByEmail:string;
+  completedByName: string;
+  completed: boolean; 
   resolution: string;
-
-
 }
