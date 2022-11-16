@@ -20,6 +20,18 @@ export class MenuListComponent implements OnInit {
   loadTickets = (): void => {
     this.services.getTickets().subscribe((data: Ticket[]) => this.tickets = data);
   }
+
+  isExpanded = false;
+
+  collapse() {
+    this.isExpanded = false;
+  }
+
+  toggle() {
+    this.isExpanded = !this.isExpanded;
+
+ 
+}
 }
 
 
