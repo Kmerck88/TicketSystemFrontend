@@ -1,25 +1,32 @@
 <body>
-  
-  
-  
+  <!-- <table style="width: 100%">
+    <tr>
+      <span *ngFor="let ticket of tickets">
+        <td>
+          {{ ticket.name }}
+        </td>
 
-<table style="width:100%">
-  <tr>
-    <span *ngFor="let ticket of tickets">
-    <td>
-      {{ticket.name}}
-    </td>
+        <td>
+          {{ ticket.detail }}
+        </td>
+      </span>
+    </tr>
+  </table> -->
 
-    <td>
-      {{ticket.}}
-    </td>
-  </span>
-  </tr>
-   
-</table>
-
+  <div id="todo-list-container">
+    <table>
+      <thead></thead>
+      <tbody>
+        <tr class="container" *ngFor="let ticket of tickets; let i = index">
+          <td>
+            {{ i + 1 }} {{ticket.name}}
+            <button mat-raised-button color="primary" (click)="AddBookmark(ticket.id)">
+              Add to bookmarks
+            </button>
+            <!-- {{ todo.task }} <button mat-icon-button color="warn" (click)="removeTask(todo)"><mat-icon>close</mat-icon></button> -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </body>
-
-
-
-

@@ -17,6 +17,7 @@ export class TicketListComponent implements OnInit {
   showForm: boolean = false;
   showOpens: boolean = false;
   byStatus: Ticket[] = [];
+  userId: string = "admin";
 
   tickets: Ticket[] = [];
   ngOnInit(): void {
@@ -24,6 +25,12 @@ export class TicketListComponent implements OnInit {
       console.log(response);
       this.tickets = response;
     });
+  }
+
+  AddBookmark(ticketId: number) {
+    this.ticketService.addBookmark(ticketId, this.userId);
+    console.log("made it here");
+    
   }
 
   NewTicket(createdTicket: Ticket): void {
