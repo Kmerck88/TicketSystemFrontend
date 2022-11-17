@@ -19,5 +19,5 @@
   </div>
   <form>
    <input class="form-control" type="text" id="userId" name="userId" #userId placeholder="Search..." />
-   <button (click)="getBookmarksForUserId()">Search</button>
+   <button (click)="getBookmarksForUserId(userId.value)">Search</button>
   </form>

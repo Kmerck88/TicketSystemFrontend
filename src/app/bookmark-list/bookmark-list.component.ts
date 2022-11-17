@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Bookmark } from '../bookmark';
 import { TicketSystemService } from '../ticket-system.service';
 import { FormBuilder } from '@angular/forms';
@@ -13,6 +13,7 @@ export class BookmarkListComponent implements OnInit {
   constructor(private ticketService: TicketSystemService) { }
 
 
+@Input()
 
   userId: string = '';
   bookmarks: Bookmark[] = [];
@@ -25,9 +26,9 @@ export class BookmarkListComponent implements OnInit {
     });
   }
 
-  getBookmarksForUserId = (): void => {
-    console.log(this.userId);
-    this.ticketService.getBookmarksFromUser(this.userId).subscribe((response: Bookmark[]) => {
+  getBookmarksForUserId = (input: string): void => {
+    console.log(input);
+    this.ticketService.getBookmarksFromUser(input).subscribe((response: Bookmark[]) => {
       console.log(response);
       this.bookmarks = response;
     });
