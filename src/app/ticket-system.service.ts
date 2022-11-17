@@ -26,6 +26,10 @@ export class TicketSystemService {
     return this.httpclient.post<Ticket>(this.backend + "Ticket/createticket",  ticket);
   }
 
+  getBookmarks = (): Observable<Bookmark[]> => {
+    return this.httpclient.get<Bookmark[]>(this.backend + "Bookmark/allbookmarks");
+  }
+
   //BOOKMARK SERVICES
   addBookmark = (ticketId: number, userId: string): Observable<Bookmark> => {
     console.log("and i made it here");

@@ -1,0 +1,16 @@
+<div id="bookmark-container">
+    <table class="table" style="width: 100%">
+      <thead>
+        Bookmarks for {{userId}}
+      </thead>
+      <tbody>
+        <tr class="container" *ngFor="let bookmark of bookmarks; let i = index">
+          <td>
+            <button mat-raised-button color="primary" class="link">
+              {{ bookmark.ticketId }}. {{bookmark.userId}} <br />
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

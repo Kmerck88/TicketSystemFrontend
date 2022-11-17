@@ -13,6 +13,7 @@ import { TaskFormComponent } from './task-form/task-form.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { BookmarkListComponent } from './bookmark-list/bookmark-list.component';
 
 
 
@@ -23,7 +24,8 @@ import { MatCardModule } from '@angular/material/card';
     HomeComponent,
     TicketDetailsComponent, 
     TicketListComponent,
-    TaskFormComponent
+    TaskFormComponent,
+    BookmarkListComponent
 
   ],
 
