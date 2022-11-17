@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Ticket } from 'src/app/ticket';
 import { Bookmark } from './bookmark';
+import { NgForm } from '@angular/forms';
 
 
 
@@ -19,6 +20,10 @@ export class TicketSystemService {
   getTickets = (): Observable<Ticket[]> => {
     //return this.httpclient.get<Ticket[]>(`${this.backend}/alltickets`);
     return this.httpclient.get<Ticket[]>(this.backend + "Ticket/alltickets")
+  }
+
+  createTicket = (ticket: Ticket): Observable<Ticket> => {
+    return this.httpclient.post<Ticket>(this.backend + "Ticket/createticket",  ticket);
   }
 
   //BOOKMARK SERVICES

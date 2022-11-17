@@ -1,1 +1,36 @@
-<p>task-form works!</p>
+<div id="form-container">
+  <form #f="ngForm" (ngSubmit)="submit(f)">
+    <h2 class="add-order-heading">Create Ticket</h2>
+    <p>
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" [(ngModel)]="name" />
+    </p>
+    <p>
+      <label for="detail">Details:</label>
+      <input type="text" name="detail" id="detail" [(ngModel)]="detail" />
+    </p>
+    <p>
+      <label for="category">Category:</label>
+      <input type="text" name="category" id="category" [(ngModel)]="category" />
+    </p>
+    <p>
+      <label for="openedByName">Opened By:</label>
+      <input
+        type="text"
+        name="openedByName"
+        id="openedByName"
+        [(ngModel)]="openedByName"
+      />
+    </p>
+    <p>
+      <label for="openedByEmail">Email:</label>
+      <input
+        type="text"
+        name="openedByEmail"
+        id="openedByEmail"
+        [(ngModel)]="openedByEmail"
+      />
+    </p>
+    <button>Submit</button>
+  </form>
+</div>

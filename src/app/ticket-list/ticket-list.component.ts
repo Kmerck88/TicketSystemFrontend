@@ -35,12 +35,6 @@ export class TicketListComponent implements OnInit {
     
   }
 
-  NewTicket(createdTicket: Ticket): void {
-
-    this.tickets.push(createdTicket)
-
-  }
-
   ToggleDisplay() {
     this.showForm = !this.showForm;
   }

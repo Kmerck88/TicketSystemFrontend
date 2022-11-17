@@ -8,10 +8,11 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { TicketDetailsComponent } from './ticket-details/ticket-details.component';
 import { TicketListComponent } from './ticket-list/ticket-list.component';
+import { TaskFormComponent } from './task-form/task-form.component';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 
 
 
@@ -21,7 +22,8 @@ import {MatCardModule} from '@angular/material/card';
     MenuListComponent,
     HomeComponent,
     TicketDetailsComponent, 
-    TicketListComponent
+    TicketListComponent,
+    TaskFormComponent
 
   ],
 
@@ -33,8 +35,6 @@ import {MatCardModule} from '@angular/material/card';
     MatIconModule,
     MatButtonModule,
     MatCardModule
-  
-
   ],
   providers: [],
   bootstrap: [AppComponent]
