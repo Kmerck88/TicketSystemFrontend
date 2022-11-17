@@ -14,14 +14,14 @@
   </table> -->
 
   <div id="ticket-container">
-    <table class="table">
+    <table class="table" style="width: 100%">
       <thead>
         Tickets
       </thead>
       <tbody>
         <tr class="container" *ngFor="let ticket of tickets; let i = index">
           <td>
-            <button class="link" (click)="hideDetail = !hideDetail">
+            <button mat-raised-button color="primary" class="link" (click)="hideDetail = !hideDetail">
               {{ i + 1 }}. {{ ticket.name }} <br />
             </button>
             <mat-card-content [hidden]="hideDetail">
@@ -31,7 +31,7 @@
           <td>
             <button
               mat-raised-button
-              color="primary"
+              color="link"
               (click)="AddBookmark(tickets[i].id)"
             >
               Add to bookmarks

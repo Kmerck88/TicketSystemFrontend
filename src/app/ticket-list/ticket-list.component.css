@@ -1,8 +1,8 @@
 #ticket-container{
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     padding-left: 2%;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -12,12 +12,21 @@
     background: linear-gradient(to right, #8c8be6, #2d126b ); 
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);   
 }
-
 .table{
     table-layout: fixed;
     width: 500px;
+    padding: 5px;
+}
+td{
+    padding-bottom: 3em;
+    padding-top: 1em;
+}
+.link{
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 thead{
     font-size:xx-large;
+    padding-bottom: 3em;
 }
