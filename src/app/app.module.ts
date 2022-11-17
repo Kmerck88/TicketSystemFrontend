@@ -7,6 +7,7 @@ import { MenuListComponent } from './menu-list/menu-list.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { TicketDetailsComponent } from './ticket-details/ticket-details.component';
+import { TicketListComponent } from './ticket-list/ticket-list.component';
 
 
 
@@ -16,6 +17,7 @@ import { TicketDetailsComponent } from './ticket-details/ticket-details.componen
     MenuListComponent,
     HomeComponent,
     TicketDetailsComponent, 
+    TicketListComponent
 
   ],
 

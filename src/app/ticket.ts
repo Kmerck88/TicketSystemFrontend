@@ -1,4 +1,4 @@
-export interface Ticket { 
+export interface Ticket {
   id: number;
   name: string;
   category: string;
@@ -6,8 +6,8 @@ export interface Ticket {
   created: Date;
   openedByName: string;
   openedByEmail: number;
-  completedByEmail:string;
+  completedByEmail: string;
   completedByName: string;
-  completed: boolean; 
+  completed: boolean;
   resolution: string;
 }
