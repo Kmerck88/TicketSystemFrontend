@@ -13,6 +13,7 @@ export class BookmarkListComponent implements OnInit {
 
   userId: string = "admin";
   bookmarks: Bookmark[] = [];
+  userBookmarks: boolean = false;
 
   ngOnInit(): void {
     this.ticketService.getBookmarks().subscribe((response: Bookmark[]) => {
@@ -22,7 +23,9 @@ export class BookmarkListComponent implements OnInit {
   }
 
   getBookmarksForUser = (userId: string): void => {
-    this.ticketService.
+    this.ticketService.getBookmarksFromUser(userId).subscribe((response: Bookmark[]) => {
+      console.log(response);
+      this.bookmarks = response;
+    });
   }
-
 }

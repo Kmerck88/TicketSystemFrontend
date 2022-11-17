@@ -30,10 +30,14 @@ export class TicketSystemService {
     return this.httpclient.get<Bookmark[]>(this.backend + "Bookmark/allbookmarks");
   }
 
-  //BOOKMARK SERVICES
-  addBookmark = (ticketId: number, userId: string): Observable<Bookmark> => {
-    console.log("and i made it here");
-    return this.httpclient.get<Bookmark>(`${this.backend}Bookmark/addtobookmark/${ticketId}/${userId}`)
-    //https://localhost:7289/api/Bookmark/addtobookmark/1/{userid}
+  getBookmarksFromUser = (userId: string): Observable<Bookmark[]> => {
+    return this.httpclient.get<Bookmark[]>(`${this.backend}/Bookmark/viewbookmarks/${userId}`)
   }
+
+  // //BOOKMARK SERVICES
+  // addBookmark = (ticketId: number, userId: string): Observable<Bookmark> => {
+  //   console.log("and i made it here");
+  //   return this.httpclient.get<Bookmark>(`${this.backend}Bookmark/addtobookmark/${ticketId}/${userId}`)
+  //   //https://localhost:7289/api/Bookmark/addtobookmark/1/{userid}
+  // }
 }

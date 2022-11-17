@@ -29,11 +29,11 @@ export class TicketListComponent implements OnInit {
     });
   }
 
-  AddBookmark(ticketId: number) {
-    this.ticketService.addBookmark(ticketId, this.userId);
-    console.log("made it here");
+  // AddBookmark(ticketId: number) {
+  //   this.ticketService.addBookmark(ticketId, this.userId);
+  //   console.log("made it here");
     
-  }
+  // }
 
   ToggleDisplay() {
     this.showForm = !this.showForm;
