@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Bookmark } from '../bookmark';
 import { TicketSystemService } from '../ticket-system.service';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-bookmark-list',
@@ -11,7 +12,9 @@ export class BookmarkListComponent implements OnInit {
 
   constructor(private ticketService: TicketSystemService) { }
 
-  userId: string = "admin";
+
+
+  userId: string = '';
   bookmarks: Bookmark[] = [];
   userBookmarks: boolean = false;
 
@@ -22,8 +25,9 @@ export class BookmarkListComponent implements OnInit {
     });
   }
 
-  getBookmarksForUser = (userId: string): void => {
-    this.ticketService.getBookmarksFromUser(userId).subscribe((response: Bookmark[]) => {
+  getBookmarksForUserId = (): void => {
+    console.log(this.userId);
+    this.ticketService.getBookmarksFromUser(this.userId).subscribe((response: Bookmark[]) => {
       console.log(response);
       this.bookmarks = response;
     });

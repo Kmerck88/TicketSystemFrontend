@@ -31,7 +31,7 @@ export class TicketSystemService {
   }
 
   getBookmarksFromUser = (userId: string): Observable<Bookmark[]> => {
-    return this.httpclient.get<Bookmark[]>(`${this.backend}/Bookmark/viewbookmarks/${userId}`)
+    return this.httpclient.get<Bookmark[]>(`${this.backend}Bookmark/viewbookmarks/${userId}`)
   }
 
   // //BOOKMARK SERVICES

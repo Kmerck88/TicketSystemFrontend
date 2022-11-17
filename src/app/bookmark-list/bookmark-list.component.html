@@ -4,7 +4,7 @@
         Bookmarks
       </thead>
       <thead>
-        
+
       </thead>
       <tbody>
         <tr class="container" *ngFor="let bookmark of bookmarks; let i = index">
@@ -17,3 +17,7 @@
       </tbody>
     </table>
   </div>
+  <form>
+   <input class="form-control" type="text" id="userId" name="userId" #userId placeholder="Search..." />
+   <button (click)="getBookmarksForUserId()">Search</button>
+  </form>
