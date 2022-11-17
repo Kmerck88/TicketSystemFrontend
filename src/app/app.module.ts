@@ -9,6 +9,10 @@ import { HomeComponent } from './home/home.component';
 import { TicketDetailsComponent } from './ticket-details/ticket-details.component';
 import { TicketListComponent } from './ticket-list/ticket-list.component';
 
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+
 
 
 @NgModule({
@@ -26,7 +30,9 @@ import { TicketListComponent } from './ticket-list/ticket-list.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    FormsModule, 
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule
   
 
   ],

@@ -13,18 +13,31 @@
     </tr>
   </table> -->
 
-  <div id="todo-list-container">
-    <table>
-      <thead></thead>
+  <div id="ticket-container">
+    <table class="table">
+      <thead>
+        Tickets
+      </thead>
       <tbody>
         <tr class="container" *ngFor="let ticket of tickets; let i = index">
           <td>
-            {{ i + 1 }} {{ticket.name}}
-            <button mat-raised-button color="primary" (click)="AddBookmark(ticket.id)">
+            <button class="link" (click)="hideDetail = !hideDetail">
+              {{ i + 1 }}. {{ ticket.name }} <br />
+            </button>
+            <mat-card-content [hidden]="hideDetail">
+              {{ this.ticket.detail }}
+            </mat-card-content>
+          </td>
+          <td>
+            <button
+              mat-raised-button
+              color="primary"
+              (click)="AddBookmark(tickets[i].id)"
+            >
               Add to bookmarks
             </button>
-            <!-- {{ todo.task }} <button mat-icon-button color="warn" (click)="removeTask(todo)"><mat-icon>close</mat-icon></button> -->
           </td>
+          <!-- {{ todo.task }} <button mat-icon-button color="warn" (click)="removeTask(todo)"><mat-icon>close</mat-icon></button> -->
         </tr>
       </tbody>
     </table>

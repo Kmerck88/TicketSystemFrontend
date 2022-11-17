@@ -19,6 +19,8 @@ export class TicketListComponent implements OnInit {
   byStatus: Ticket[] = [];
   userId: string = "admin";
 
+  hideDetail: boolean = true;
+
   tickets: Ticket[] = [];
   ngOnInit(): void {
     this.ticketService.getTickets().subscribe((response: Ticket[]) => {
