@@ -10,14 +10,15 @@
         <tr class="container" *ngFor="let bookmark of bookmarks; let i = index">
           <td>
             <button mat-raised-button color="primary" class="link">
-              {{ bookmark.ticketId }}. {{bookmark.userId}} <br />
+              {{ bookmark.ticketId }}. {{bookmark.userId}} {{bookmark}}<br />
             </button>
           </td>
         </tr>
       </tbody>
     </table>
+    <form>
+        <input class="form-control" type="text" id="userId" name="userId" #userId placeholder="Search..." />
+        <button (click)="getBookmarksForUserId(userId.value)">Search</button>
+       </form>
   </div>
-  <form>
-   <input class="form-control" type="text" id="userId" name="userId" #userId placeholder="Search..." />
-   <button (click)="getBookmarksForUserId(userId.value)">Search</button>
-  </form>
+ 

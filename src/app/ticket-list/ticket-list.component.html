@@ -21,7 +21,12 @@
       <tbody>
         <tr class="container" *ngFor="let ticket of tickets; let i = index">
           <td>
-            <button mat-raised-button color="primary" class="link" (click)="hideDetail = !hideDetail">
+            <button
+              mat-raised-button
+              color="primary"
+              class="link"
+              (click)="hideDetail = !hideDetail"
+            >
               {{ i + 1 }}. {{ ticket.name }} <br />
             </button>
             <mat-card-content [hidden]="hideDetail">
@@ -29,13 +34,9 @@
             </mat-card-content>
           </td>
           <td>
-            <!-- <button
-              mat-raised-button
-              color="link"
-              (click)="AddBookmark()"
-            >
+            <button mat-raised-button color="link">
               Add to bookmarks
-            </button> -->
+            </button>
           </td>
           <!-- {{ todo.task }} <button mat-icon-button color="warn" (click)="removeTask(todo)"><mat-icon>close</mat-icon></button> -->
         </tr>
